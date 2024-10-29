@@ -1,0 +1,92 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1730193806
+animation.gd::GDScript::-1::1728921549::0::1::::<>Node2D<>::
+animation.tscn::PackedScene::7622496564548648676::1729076385::0::1::::<><>::res://animation.gd<>uid://bw1n6gc3ckn8g::::res://assets/walking-ghost.png
+export_presets.cfg::TextFile::-1::1728820997::0::1::::<><>::
+icon.svg::CompressedTexture2D::8545729946803828470::1728710798::1728712501::1::::<><>::
+mouse.gd::GDScript::-1::1728921646::0::1::::<>Node2D<>::
+mouse.tscn::PackedScene::2101029506641450640::1729076385::0::1::::<><>::res://mouse.gd<>uid://bw1n6gc3ckn8g::::res://assets/walking-ghost.png
+navigation.gd::GDScript::-1::1728921705::0::1::::<>Node2D<>::
+navigation.tscn::PackedScene::916168014887471793::1729076385::0::1::::<><>::res://navigation.gd<>uid://cttd2qvdqlrfu::::res://assets/hat_man.png
+::res://assets/::1728920360
+Fish-sheet.png::CompressedTexture2D::2084148857773739245::1728819765::1728819881::1::::<><>::
+hat_man.png::CompressedTexture2D::6145883814222319610::1728736373::1728736383::1::::<><>::
+walking-ghost.png::CompressedTexture2D::3985094065357366924::1728821174::1728920360::1::::<><>::
+::res://docs/::1728920360
+index.apple-touch-icon.png::CompressedTexture2D::8445629763231982946::1728820996::1728920360::1::::<><>::
+index.icon.png::CompressedTexture2D::6450083734162750968::1728820996::1728920360::1::::<><>::
+index.png::CompressedTexture2D::2007517726362637944::1728820996::1728920360::1::::<><>::
+::res://spritesheets/::1729034820
+animated_robots.png::CompressedTexture2D::8591113966727885358::1728981006::1729034820::1::::<><>::
+Fish-sheet.png::CompressedTexture2D::3868424990636390920::1728819765::1728819881::1::::<><>::
+Fish.png::CompressedTexture2D::3569177785246795088::1728680814::1728819881::1::::<><>::
+::res://spritesheets/Hana Caraka/::1728711128
+damage.png::CompressedTexture2D::5087072792652355618::1700735618::1728711128::1::::<><>::
+death.png::CompressedTexture2D::483611610167542755::1700735602::1728711128::1::::<><>::
+idle.png::CompressedTexture2D::1822999349339650719::1700735530::1728711128::1::::<><>::
+jump.png::CompressedTexture2D::3843999781255917596::1700735586::1728711128::1::::<><>::
+Read Me.txt::TextFile::-1::1700735468::0::1::::<><>::
+run.png::CompressedTexture2D::4995394792748834130::1700735560::1728711128::1::::<><>::
+walk.png::CompressedTexture2D::8172717981045562313::1700735552::1728711128::1::::<><>::
+::res://spritesheets/Soldiers and Orcs/::1720928824
+::res://spritesheets/Soldiers and Orcs/Arrow(Projectile)/::1728711128
+Arrow01(32x32).png::CompressedTexture2D::7200508555501113117::1720662898::1728711128::1::::<><>::
+Arrow01(100x100).png::CompressedTexture2D::2512604619430914862::1720662882::1728711128::1::::<><>::
+::res://spritesheets/Soldiers and Orcs/Aseprite file/::1720928834
+::res://spritesheets/Soldiers and Orcs/Characters(100x100)/::1720928860
+::res://spritesheets/Soldiers and Orcs/Characters(100x100)/Orc/::1720928860
+::res://spritesheets/Soldiers and Orcs/Characters(100x100)/Orc/Orc/::1728711128
+Orc-Attack01.png::CompressedTexture2D::6844183877690451386::1715378734::1728711128::1::::<><>::
+Orc-Attack02.png::CompressedTexture2D::7232290600633766725::1715378736::1728711128::1::::<><>::
+Orc-Death.png::CompressedTexture2D::6700258527138032291::1715378736::1728711128::1::::<><>::
+Orc-Hurt.png::CompressedTexture2D::3242883954635779912::1715378736::1728711128::1::::<><>::
+Orc-Idle.png::CompressedTexture2D::2481028668764240211::1715378734::1728711128::1::::<><>::
+Orc-Walk.png::CompressedTexture2D::4336732941599106441::1715378734::1728711128::1::::<><>::
+Orc.png::CompressedTexture2D::4182736861020485136::1715378542::1728711128::1::::<><>::
+::res://spritesheets/Soldiers and Orcs/Characters(100x100)/Orc/Orc/Shadow sprites/::1728711128
+Orc-shadow.png::CompressedTexture2D::351246179274910294::1715378604::1728711128::1::::<><>::
+Orc-shadow_attack02.png::CompressedTexture2D::4929011761872972835::1715378638::1728711128::1::::<><>::
+Orc-shadow_death.png::CompressedTexture2D::4671018368495294633::1715378660::1728711128::1::::<><>::
+::res://spritesheets/Soldiers and Orcs/Characters(100x100)/Orc/Orc with shadows/::1728711128
+Orc-Attack01.png::CompressedTexture2D::3486028843205065625::1715378764::1728711128::1::::<><>::
+Orc-Attack02.png::CompressedTexture2D::8455397434957256796::1715378764::1728711128::1::::<><>::
+Orc-Death.png::CompressedTexture2D::6468603558988774623::1715378764::1728711128::1::::<><>::
+Orc-Hurt.png::CompressedTexture2D::2578286871519107462::1715378764::1728711128::1::::<><>::
+Orc-Idle.png::CompressedTexture2D::8703869213477872365::1715378762::1728711128::1::::<><>::
+Orc-Walk.png::CompressedTexture2D::6423934955600712792::1715378762::1728711128::1::::<><>::
+Orc.png::CompressedTexture2D::7661224329022759344::1715378560::1728711128::1::::<><>::
+::res://spritesheets/Soldiers and Orcs/Characters(100x100)/Orc/Orc(Split Effects)/::1728711128
+Orc-attack01_Effect.png::CompressedTexture2D::7420541784373798280::1720925386::1728711128::1::::<><>::
+Orc-attack02_Effect.png::CompressedTexture2D::919823748970242084::1720925388::1728711128::1::::<><>::
+Orc.png::CompressedTexture2D::7895205597411214092::1720925380::1728711128::1::::<><>::
+::res://spritesheets/Soldiers and Orcs/Characters(100x100)/Soldier/::1728664785
+::res://spritesheets/Soldiers and Orcs/Characters(100x100)/Soldier/Arrow(projectile)/::1728711128
+Arrow01(32x32).png::CompressedTexture2D::5473726478054436471::1720662898::1728711128::1::::<><>::
+Arrow01(100x100).png::CompressedTexture2D::6553945205401888508::1720662882::1728711128::1::::<><>::
+::res://spritesheets/Soldiers and Orcs/Characters(100x100)/Soldier/Soldier/::1728711128
+Soldier-Attack01.png::CompressedTexture2D::3283180082792677972::1720926854::1728711128::1::::<><>::
+Soldier-Attack02.png::CompressedTexture2D::6713458071480319342::1720926854::1728711128::1::::<><>::
+Soldier-Attack03.png::CompressedTexture2D::8336445236899183099::1720926854::1728711128::1::::<><>::
+Soldier-Death.png::CompressedTexture2D::5372988642746590105::1720926854::1728711128::1::::<><>::
+Soldier-Hurt.png::CompressedTexture2D::2054989340982003956::1720926854::1728711128::1::::<><>::
+Soldier-Idle.png::CompressedTexture2D::3315551379087131916::1720926854::1728711128::1::::<><>::
+Soldier-Shadow_attack2.png::CompressedTexture2D::3931696526748701310::1715379280::1728711128::1::::<><>::
+Soldier-Walk.png::CompressedTexture2D::1231130485667215194::1720926854::1728711128::1::::<><>::
+Soldier.png::CompressedTexture2D::6380896558941980599::1720926756::1728711128::1::::<><>::
+::res://spritesheets/Soldiers and Orcs/Characters(100x100)/Soldier/Soldier/Shadow sprites/::1728711128
+Soldier-Shadow.png::CompressedTexture2D::6268044225787479458::1715379250::1728711128::1::::<><>::
+Soldier-Shadow_death.png::CompressedTexture2D::7675606834832620209::1715379300::1728711128::1::::<><>::
+::res://spritesheets/Soldiers and Orcs/Characters(100x100)/Soldier/Soldier with shadows/::1728711128
+Soldier-Attack01.png::CompressedTexture2D::6004425718721892392::1720926824::1728711128::1::::<><>::
+Soldier-Attack02.png::CompressedTexture2D::1481256620404303018::1720926824::1728711128::1::::<><>::
+Soldier-Attack03.png::CompressedTexture2D::8677672638902391087::1720926824::1728711128::1::::<><>::
+Soldier-Death.png::CompressedTexture2D::3528067901237675920::1720926824::1728711128::1::::<><>::
+Soldier-Hurt.png::CompressedTexture2D::703896556263412205::1720926824::1728711128::1::::<><>::
+Soldier-Idle.png::CompressedTexture2D::7155359899659559968::1720926824::1728711128::1::::<><>::
+Soldier-Walk.png::CompressedTexture2D::1859537565431693957::1720926824::1728711128::1::::<><>::
+Soldier.png::CompressedTexture2D::6660467791804180870::1720926740::1728711128::1::::<><>::
+::res://spritesheets/Soldiers and Orcs/Characters(100x100)/Soldier/Soldier(Split Effects)/::1728711128
+Soldier-Attack01_Effect.png::CompressedTexture2D::8917487186855824670::1720926894::1728711128::1::::<><>::
+Soldier-Attack02_Effect.png::CompressedTexture2D::769321869142388630::1720926894::1728711128::1::::<><>::
+Soldier-Attack03_Effect.png::CompressedTexture2D::8944704979740006419::1720926894::1728711128::1::::<><>::
+Soldier.png::CompressedTexture2D::2135320292102457848::1720926816::1728711128::1::::<><>::
