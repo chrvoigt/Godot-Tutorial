@@ -988,7 +988,6 @@ tile_map_data = PackedByteArray("AAAxAA0AAQAdABIAAAAxAA4AAQAdABMAAAAxAA8AAQAdABQ
 tile_set = ExtResource("4_jil26")
 
 [node name="Collisions" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="House" type="CollisionPolygon2D" parent="Collisions"]
 polygon = PackedVector2Array(280, 80, 288, 248, 552, 248, 560, 80)
@@ -1013,7 +1012,6 @@ shape = SubResource("RectangleShape2D_sfgc0")
 [node name="Lighting" type="Node2D" parent="."]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
-visible = false
 color = Color(0.966797, 0.735011, 0.0396538, 1)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lighting"]
