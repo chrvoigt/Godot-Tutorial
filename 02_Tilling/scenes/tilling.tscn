@@ -1014,9 +1014,10 @@ shape = SubResource("RectangleShape2D_sfgc0")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
 visible = false
-color = Color(0.295119, 0.25384, 0.60363, 1)
+color = Color(0.966797, 0.735011, 0.0396538, 1)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lighting"]
+visible = false
 position = Vector2(232, 88)
 color = Color(0.127736, 0.127736, 0.127736, 1)
 energy = 0.86
@@ -1027,6 +1028,7 @@ height = 0.39
 max_distance = 1.0
 
 [node name="Door_Light" type="PointLight2D" parent="Lighting"]
+visible = false
 position = Vector2(400, 251.125)
 scale = Vector2(0.424779, 0.60875)
 color = Color(0.335499, 0.996054, 1, 1)
@@ -1035,6 +1037,7 @@ shadow_color = Color(0.118581, 0.118581, 0.118581, 0)
 texture = ExtResource("5_iaw1q")
 
 [node name="Sun_Light" type="PointLight2D" parent="Lighting"]
+visible = false
 position = Vector2(944, -9.53674e-07)
 scale = Vector2(2.41338, 2.91062)
 blend_mode = 2
@@ -1043,12 +1046,12 @@ shadow_color = Color(0.259294, 0.259294, 0.259294, 0.733333)
 texture = ExtResource("6_nas8r")
 
 [node name="Rain" type="Node2D" parent="."]
-position = Vector2(808, -120)
+position = Vector2(1160, -120)
 script = ExtResource("7_d2e3j")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Rain"]
-position = Vector2(64, 16)
-amount = 50000
+position = Vector2(48, 747)
+amount = 5000
 lifetime = 1.5
 emission_shape = 3
 emission_rect_extents = Vector2(500, 1000)
