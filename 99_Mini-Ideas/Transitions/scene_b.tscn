@@ -12,6 +12,8 @@ size = Vector2(168, 109)
 [node name="Scene_B" type="TextureRect" parent="."]
 offset_right = 2000.0
 offset_bottom = 1167.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource("1_kmwop")
 expand_mode = 1
 stretch_mode = 4
