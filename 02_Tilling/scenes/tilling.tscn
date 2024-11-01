@@ -1010,12 +1010,13 @@ position = Vector2(992, -56)
 shape = SubResource("RectangleShape2D_sfgc0")
 
 [node name="Lighting" type="Node2D" parent="."]
+visible = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
+visible = false
 color = Color(0.966797, 0.735011, 0.0396538, 1)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lighting"]
-visible = false
 position = Vector2(232, 88)
 color = Color(0.127736, 0.127736, 0.127736, 1)
 energy = 0.86
@@ -1035,7 +1036,6 @@ shadow_color = Color(0.118581, 0.118581, 0.118581, 0)
 texture = ExtResource("5_iaw1q")
 
 [node name="Sun_Light" type="PointLight2D" parent="Lighting"]
-visible = false
 position = Vector2(944, -9.53674e-07)
 scale = Vector2(2.41338, 2.91062)
 blend_mode = 2
@@ -1044,6 +1044,7 @@ shadow_color = Color(0.259294, 0.259294, 0.259294, 0.733333)
 texture = ExtResource("6_nas8r")
 
 [node name="Rain" type="Node2D" parent="."]
+visible = false
 position = Vector2(1160, -120)
 script = ExtResource("7_d2e3j")
 
