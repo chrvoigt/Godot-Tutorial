@@ -1,0 +1,9 @@
+[sound path="res://assets/rain.mp3" volume="-10.0"]
+character: Willkommen, stranger!
+label Motivfrage (Dispplay?)
+character: Was führt Dich zu mi?
+set {response} = ".. denke ich zumindest."
+[text_input text="Dein Grund ..." var="response" placeholder="maybe X ? " allow_empty="true"]
+if {response} == "x":
+	jump dialog_branch_2/
+hase: you misse dme \:-)N 
