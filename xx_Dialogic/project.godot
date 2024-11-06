@@ -34,7 +34,7 @@ variables={
 "dialogue_style": "",
 "response": ""
 }
-layout/style_list=["res://timeline/speaker_textbox.tres", "res://timeline/Text_bubble.tres"]
+layout/style_list=["res://timeline/speaker_textbox.tres", "res://timeline/Text_bubble.tres", "res://assets/visual_novel.tres"]
 layout/default_style="res://timeline/speaker_textbox.tres"
 
 [editor_plugins]

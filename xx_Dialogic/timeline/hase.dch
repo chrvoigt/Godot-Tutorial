@@ -19,11 +19,12 @@
 "export_overrides": {
 "image": "\"res://timeline/Hase mit Möhre.png\""
 },
-"mirror": true,
-"offset": Vector2(0, 0),
-"scale": 1.0,
-"scene": ""
+"ignore_char_scale": true,
+"mirror": false,
+"offset": Vector2(1, 1),
+"scale": 0.5,
+"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
 }
 },
-"scale": 0.5
+"scale": 1.0
 }

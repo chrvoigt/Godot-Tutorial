@@ -1,0 +1,26 @@
+
+** Wichtig **
+
+HealthBar (Bar % Hearts) und Signals 
+
+Audio einbinden 
+
+UI Themen mit Style Ressources (Button Spreadsheets) 
+
+Enemy attacks (Shooting)
+
+Dialog Bubbles / Trees 
+
+Inventories 
+
+Tweening for Dashs (name comes from in-betweening and is a animation technique)
+
+
+
+** Maybe **
+
+Smoothing Transitions zwischen den Szenen  mit AnimationPlayer 
+
+Navigation Manager between Levels / Rooms  
+
+Parallax Scrolling 

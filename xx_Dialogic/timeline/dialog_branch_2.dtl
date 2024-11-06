@@ -1,2 +1,4 @@
-hase:  Welcome to the rabbit hole !!
-hase: life is tough!! 
+[music fade="10.0" volume="0.0"]
+[music path="res://assets/zapsplat_drumms.mp3" fade="0.0" volume="6.0" loop="false"]
+hase: Welcome to the rabbit hole !! Do you hear the drumms?
+hase: Life is tough!!
