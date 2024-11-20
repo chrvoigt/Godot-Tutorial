@@ -1,15 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmi2125lyjs3d"]
+[gd_scene load_steps=4 format=3 uid="uid://cmi2125lyjs3d"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_2sc4p"]
-[ext_resource type="Texture2D" uid="uid://ce0xrta0xb6bo" path="res://assets/graveyard.jpg" id="2_5tc7f"]
+[ext_resource type="Texture2D" uid="uid://bmmldyw4hhtbj" path="res://assets/castle.jpg" id="2_2w2l2"]
+[ext_resource type="PackedScene" uid="uid://nkgpuc451qui" path="res://scenes/custom.tscn" id="3_71u4h"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_2sc4p")
-path = null
+
+[node name="Custom" parent="." instance=ExtResource("3_71u4h")]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 658.0
-texture = ExtResource("2_5tc7f")
+texture = ExtResource("2_2w2l2")
 expand_mode = 3
 stretch_mode = 4
