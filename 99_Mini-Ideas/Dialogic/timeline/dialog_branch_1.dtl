@@ -1,4 +1,4 @@
-[music path="res://assets/zapsplat_dark_spaces.mp3" fade="0.0" volume="0.0"]
+[music path="zapsplat_dark_spaces.mp3" fade="0.0" volume="0.0"]
 [voice path="res://assets/W_Vidnoz_Meloni'.mp3" volume="0.0" bus=""]
 character: Höre gut zu !
 label Motivfrage (Dispplay?)
