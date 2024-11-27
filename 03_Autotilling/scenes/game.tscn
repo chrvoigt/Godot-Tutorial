@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci7m4b54q86ju"]
+
+[ext_resource type="PackedScene" uid="uid://6tt181ub5rck" path="res://scenes/setting.tscn" id="1_dhuuy"]
+[ext_resource type="PackedScene" uid="uid://dgunn05t6ql0w" path="res://scenes/player.tscn" id="2_dahk0"]
+[ext_resource type="PackedScene" uid="uid://i03i7a5s5rx5" path="res://scenes/player_new.tscn" id="3_jlk0t"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Setting" parent="." instance=ExtResource("1_dhuuy")]
+
+[node name="Player" parent="." instance=ExtResource("2_dahk0")]
+position = Vector2(531, 241)
+
+[node name="Player_new" parent="." instance=ExtResource("3_jlk0t")]
+position = Vector2(449, 283)

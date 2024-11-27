@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://i03i7a5s5rx5"]
+
+[ext_resource type="PackedScene" uid="uid://dgunn05t6ql0w" path="res://scenes/player.tscn" id="1_spp0b"]
+[ext_resource type="Texture2D" uid="uid://danww7kqlyw5o" path="res://player/SpriteSheet2.png" id="2_dc5ev"]
+
+[node name="Player_new" instance=ExtResource("1_spp0b")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_dc5ev")

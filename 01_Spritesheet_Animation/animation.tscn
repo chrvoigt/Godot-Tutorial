@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dgunn05t6ql0w"]
+[gd_scene load_steps=9 format=3 uid="uid://cj0fcjd5v2uo1"]
 
 [ext_resource type="Script" path="res://animation.gd" id="1_lgqig"]
 [ext_resource type="Texture2D" uid="uid://bw1n6gc3ckn8g" path="res://assets/walking-ghost.png" id="2_swufp"]
