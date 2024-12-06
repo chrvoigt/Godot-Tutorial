@@ -100,7 +100,6 @@ _data = {
 }
 
 [node name="Player" type="Node2D"]
-position = Vector2(449, 285)
 script = ExtResource("1_bifly")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

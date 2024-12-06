@@ -9,7 +9,7 @@
 [node name="Setting" parent="." instance=ExtResource("1_dhuuy")]
 
 [node name="Player" parent="." instance=ExtResource("2_dahk0")]
-position = Vector2(531, 241)
+position = Vector2(488, 336)
 
 [node name="Player_new" parent="." instance=ExtResource("3_jlk0t")]
-position = Vector2(449, 283)
+position = Vector2(512, 296)
