@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgqh14oyqmpmw"]
+
+[ext_resource type="Texture2D" uid="uid://dnfo3ab82hrg7" path="res://assets/characters/Free Cow Sprites.png" id="1_y5ngg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2xf8"]
+atlas = ExtResource("1_y5ngg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4es6"]
+atlas = ExtResource("1_y5ngg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rok65"]
+atlas = ExtResource("1_y5ngg")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lpxhb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2xf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4es6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rok65")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Cow" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_lpxhb")
+animation = &"idle"
+frame_progress = 0.431271
