@@ -55,5 +55,5 @@ func sprouty_animation(direction: Vector2):
 		watering = true
 	else:
 		watering = false
-	print (watering)
+	# print (watering)
 	
