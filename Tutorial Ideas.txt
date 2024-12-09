@@ -24,3 +24,7 @@ Smoothing Transitions zwischen den Szenen  mit AnimationPlayer
 Navigation Manager between Levels / Rooms  
 
 Parallax Scrolling 
+
+Raycasting (Obstacle detection) 
+
+Coyote Time (Jump n Run only) 
