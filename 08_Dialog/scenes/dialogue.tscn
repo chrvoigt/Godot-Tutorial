@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://de16i8jlttcqv"]
+
+[ext_resource type="Script" path="res://scenes/dialogue.gd" id="1_3oxqt"]
+[ext_resource type="Texture2D" uid="uid://csdnw3o6uilbf" path="res://assets/bubble_shape.png" id="1_hok8w"]
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3oxqt")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 368.0
+offset_bottom = 274.0
+scale = Vector2(3.29563, 1.97176)
+texture = ExtResource("1_hok8w")
+
+[node name="Name" type="Label" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 101.953
+offset_top = 85.2031
+offset_right = 301.953
+offset_bottom = 115.203
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(6.97896e-07, 0, 0.378362, 1)
+theme_override_font_sizes/font_size = 60
+text = "Arno:"
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 113.0
+offset_right = 568.0
+offset_bottom = 315.0
+scale = Vector2(0.4, 0.4)
+theme_override_colors/default_color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = "some lines  ..."

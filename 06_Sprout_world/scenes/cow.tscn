@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgqh14oyqmpmw"]
+[gd_scene load_steps=7 format=3 uid="uid://bgqh14oyqmpmw"]
 
 [ext_resource type="Texture2D" uid="uid://dnfo3ab82hrg7" path="res://assets/characters/Free Cow Sprites.png" id="1_y5ngg"]
+[ext_resource type="Script" path="res://scenes/cow.gd" id="2_0d3b1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q2xf8"]
 atlas = ExtResource("1_y5ngg")
@@ -36,3 +37,4 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_lpxhb")
 animation = &"idle"
 frame_progress = 0.431271
+script = ExtResource("2_0d3b1")

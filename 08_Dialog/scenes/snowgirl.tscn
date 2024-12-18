@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8qc0gvn2ch8o"]
+
+[ext_resource type="Texture2D" uid="uid://vvub6d7hiw5t" path="res://assets/schneefrau.png" id="1_7oute"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wra68"]
+radius = 45.0111
+
+[node name="snowgirl" type="CharacterBody2D"]
+position = Vector2(392, 453)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-66.5608, 62.682)
+scale = Vector2(0.421319, 0.429568)
+texture = ExtResource("1_7oute")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-61, 63)
+shape = SubResource("CircleShape2D_wra68")
+debug_color = Color(0.601983, 0.921155, 1, 0.42)
