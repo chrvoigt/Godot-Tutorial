@@ -5,7 +5,7 @@ extends Control
 
 var dialogue = []
 var current_dialogue_id = 0
-
+#sneaky change
 
 func _ready():
 	start()
