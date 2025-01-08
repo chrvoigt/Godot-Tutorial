@@ -34,7 +34,8 @@ animations = [{
 
 [node name="Cow" type="AnimatedSprite2D"]
 texture_filter = 1
+position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_lpxhb")
 animation = &"idle"
-frame_progress = 0.431271
+frame_progress = 0.701972
 script = ExtResource("2_0d3b1")

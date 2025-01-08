@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq042f7tn64mw"]
+
+[ext_resource type="PackedScene" uid="uid://dl4qdbgopt6jl" path="res://scenes/world.tscn" id="1_twcq5"]
+[ext_resource type="PackedScene" uid="uid://blwgp0k0hnycv" path="res://scenes/player.tscn" id="2_oej1r"]
+[ext_resource type="PackedScene" uid="uid://biukvwym6786q" path="res://scenes/game_ui.tscn" id="4_arrtm"]
+
+[node name="Game" type="Node2D"]
+
+[node name="world" parent="." instance=ExtResource("1_twcq5")]
+
+[node name="Player" parent="." instance=ExtResource("2_oej1r")]
+position = Vector2(286, 140)
+
+[node name="Game_UI" parent="Player" instance=ExtResource("4_arrtm")]
+offset_left = -276.0
+offset_top = -138.0
+offset_right = -236.0
+offset_bottom = -98.0
