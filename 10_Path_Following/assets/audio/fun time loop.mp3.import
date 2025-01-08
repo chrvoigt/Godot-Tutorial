@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpowfabm8cs7l"
+path="res://.godot/imported/fun time loop.mp3-09aea2a34b00d34a21747a4d1224347c.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/fun time loop.mp3"
+dest_files=["res://.godot/imported/fun time loop.mp3-09aea2a34b00d34a21747a4d1224347c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
