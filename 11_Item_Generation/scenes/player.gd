@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const WINDOW_SIZE = Vector2(1130, 620) # Define the movement boundary
-const friction = 1000 # Werte: 250, 100, 1000 (versuche accel = 1000 und frciction = 100)
+const friction = 50 # Werte: 250, 100, 1000 (versuche accel = 1000 und frciction = 100)
 	
 var input: Vector2 = Vector2.ZERO
 var acceleration = 350
