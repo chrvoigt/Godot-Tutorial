@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.3", "GL Compatibility")
 
 [autoload]
 
-EventController="*res://singletons /event_controller.gd"
+EventController="*res://singletons/event_controller.gd"
 
 [gui]
 
