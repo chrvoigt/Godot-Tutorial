@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://o3bopvdfecih"]
+
+[ext_resource type="PackedScene" uid="uid://b63v2rd0tlhbo" path="res://scenes/character.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://dx0mdxmoodocm" path="res://assets/Background_1200x800.png" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://648f477jel4x" path="res://scenes/world.tscn" id="3_lnu2h"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Hintergrund" type="TextureRect" parent="."]
+offset_right = 1200.0
+offset_bottom = 800.0
+texture = ExtResource("2_yqjtg")
+
+[node name="World" parent="." instance=ExtResource("3_lnu2h")]
+
+[node name="Character" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(155, 79)
