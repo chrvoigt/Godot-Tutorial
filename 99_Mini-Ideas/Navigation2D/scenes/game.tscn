@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://cafxom2sp638y"]
+
+[ext_resource type="Script" uid="uid://c5lyskyscrh00" path="res://scenes/enemy.gd" id="2_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://olyx6241o4lp" path="res://assets/icon.svg" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://dmc606y4skgqn" path="res://assets/single_character.png" id="4_lbhrr"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_lnu2h"]
+vertices = PackedVector2Array(1089.37, 436.547, 1038.37, 560.789, 129.992, 534.07, 49.4688, 483.75, 74.1875, 191.844, 1006.72, 176.117)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(65, 182, 39, 489, 127, 544, 1045, 571, 1100, 437, 1014, 166)])
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lnu2h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lbhrr"]
+radius = 181.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lnu2h"]
+radius = 31.0
+
+[node name="Game" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1.29953e-06, 0.543674, 0.545836, 1)
+offset_right = 1155.0
+offset_bottom = 664.0
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(10, 38)
+navigation_polygon = SubResource("NavigationPolygon_lnu2h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(507, 571)
+physics_material_override = SubResource("PhysicsMaterial_lnu2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
+shape = SubResource("CircleShape2D_lbhrr")
+debug_color = Color(0.159868, 0.538711, 0.436711, 0.42)
+
+[node name="Line2D" type="Line2D" parent="NavigationRegion2D"]
+position = Vector2(101, 520)
+points = PackedVector2Array(-2, -6, 213, 2, 296, -103, 453, -111, 575, -20, 847, -21)
+
+[node name="Enemy" type="CharacterBody2D" parent="." node_paths=PackedStringArray("target")]
+position = Vector2(131, 497)
+motion_mode = 1
+script = ExtResource("2_lbhrr")
+target = NodePath("../Player")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+position = Vector2(-2, -0.999996)
+scale = Vector2(0.429688, 0.429688)
+texture = ExtResource("2_lnu2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(-1, 2)
+shape = SubResource("CircleShape2D_lnu2h")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Enemy"]
+debug_enabled = true
+
+[node name="NavTimer" type="Timer" parent="Enemy"]
+autostart = true
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(881, 497)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(3.5, 4.0625)
+texture = ExtResource("4_lbhrr")
+
+[connection signal="timeout" from="Enemy/NavTimer" to="Enemy" method="_on_nav_timer_timeout"]

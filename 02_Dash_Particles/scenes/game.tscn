@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://o406841tfovh"]
+
+[ext_resource type="PackedScene" uid="uid://cbfc7obbvfxve" path="res://scenes/Ghostie.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://cpqdgkmitohpa" path="res://scenes/small_map.png" id="1_yqjtg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
+size = Vector2(873.333, 934.584)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(593.333, 362.917)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
+size = Vector2(606.666, 405.833)
+
+[node name="Game" type="Node2D"]
+
+[node name="Ghostie" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(1509, 770)
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="Ghostie"]
+zoom = Vector2(2, 2)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 7297.0
+offset_bottom = 4150.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_yqjtg")
+stretch_mode = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TextureRect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D"]
+position = Vector2(4490, 2553.33)
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TextureRect/StaticBody2D"]
+position = Vector2(5366.67, 2835.21)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TextureRect/StaticBody2D"]
+position = Vector2(5383.33, 2300.42)
+shape = SubResource("RectangleShape2D_lbhrr")

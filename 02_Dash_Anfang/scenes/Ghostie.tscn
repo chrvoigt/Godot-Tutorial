@@ -1,0 +1,158 @@
+[gd_scene load_steps=14 format=3 uid="uid://cbfc7obbvfxve"]
+
+[ext_resource type="Script" uid="uid://cw2apha5a2nfa" path="res://scenes/ghostie.gd" id="1_svc7d"]
+[ext_resource type="Texture2D" uid="uid://bw1n6gc3ckn8g" path="res://assets/characters/walking-ghost.png" id="2_1r0su"]
+[ext_resource type="Texture2D" uid="uid://cnoxs5pq8ec7f" path="res://scenes/hexagone.png" id="3_1r0su"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkhd4"]
+radius = 11.0
+height = 52.0
+
+[sub_resource type="Animation" id="Animation_83a37"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_v1cdf"]
+resource_name = "walking_down"
+length = 0.7
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [16, 17, 18, 19, 20, 21, 22]
+}
+
+[sub_resource type="Animation" id="Animation_6m7m4"]
+resource_name = "walking_left"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11, 12, 13, 14, 15]
+}
+
+[sub_resource type="Animation" id="Animation_akqew"]
+resource_name = "walking_right"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_jysui"]
+resource_name = "walking_up"
+length = 0.7
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [24, 25, 26, 27, 28, 29, 29]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_27q1v"]
+_data = {
+&"RESET": SubResource("Animation_83a37"),
+&"walking_down": SubResource("Animation_v1cdf"),
+&"walking_left": SubResource("Animation_6m7m4"),
+&"walking_right": SubResource("Animation_akqew"),
+&"walking_up": SubResource("Animation_jysui")
+}
+
+[sub_resource type="Curve" id="Curve_serdp"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0.0321637, 198.705), 0.0, 0.0, 0, 0, Vector2(0.324561, 100.249), -546.084, -546.084, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_n6meq"]
+_data = [Vector2(0.0292398, 0.987045), 0.0, 0.0, 0, 0, Vector2(0.345029, 0.455904), 0.0, 0.0, 0, 0, Vector2(0.763158, 0.00896859), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_867rg"]
+colors = PackedColorArray(0.564706, 0.901961, 0, 1, 1, 1, 1, 1)
+
+[node name="Ghostie" type="CharacterBody2D"]
+script = ExtResource("1_svc7d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 2
+texture = ExtResource("2_1r0su")
+hframes = 30
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_rkhd4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_27q1v")
+}
+autoplay = "walking_down"
+
+[node name="DashTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="DashParticles" type="CPUParticles2D" parent="."]
+z_index = 1
+emitting = false
+amount = 50
+texture = ExtResource("3_1r0su")
+lifetime = 0.5
+randomness = 0.46
+draw_order = 1
+emission_shape = 3
+emission_rect_extents = Vector2(1, 20)
+gravity = Vector2(0, 0)
+linear_accel_max = 66.0
+linear_accel_curve = SubResource("Curve_serdp")
+scale_amount_min = 0.0
+scale_amount_max = 0.2
+scale_amount_curve = SubResource("Curve_n6meq")
+color_ramp = SubResource("Gradient_867rg")

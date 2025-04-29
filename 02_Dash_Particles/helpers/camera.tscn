@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ddw60hn2hgurn"]
+
+[node name="Camera" type="Camera2D"]
+anchor_mode = 0
+limit_left = 0
+limit_top = 0
+limit_right = 3000
+limit_bottom = 2000
+position_smoothing_enabled = true
+drag_horizontal_enabled = true

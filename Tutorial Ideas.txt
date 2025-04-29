@@ -19,6 +19,15 @@ Tweening for Dashs (name comes from in-betweening and is a animation technique)
 
 ** Maybe **
 
+Finite State Machines https://www.youtube.com/watch?v=ow_Lum-Agbs&ab_channel=Bitlytic 
+or https://www.youtube.com/watch?v=vZHzMO90IwQ&ab_channel=DevWorm 
+
+Procedural Generation (see https://www.youtube.com/watch?v=oB1xsCcO9wI&ab_channel=DevWorm=) 
+
+Addons wie Phantom Camera, Gaea (see https://www.youtube.com/watch?v=bKNmsae5zXk&ab_channel=DevWorm) 
+
+modular strategy pattern (see https://www.youtube.com/watch?v=sZDJJeDNe_M&ab_channel=Bitlytic) 
+
 Smoothing Transitions zwischen den Szenen  mit AnimationPlayer 
 
 Navigation Manager between Levels / Rooms  
