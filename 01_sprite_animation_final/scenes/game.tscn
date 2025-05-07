@@ -1,17 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://o3bopvdfecih"]
+[gd_scene load_steps=5 format=3 uid="uid://bfg4ho30ag2hd"]
 
-[ext_resource type="PackedScene" uid="uid://b63v2rd0tlhbo" path="res://scenes/character.tscn" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://dx0mdxmoodocm" path="res://assets/Background_1200x800.png" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://648f477jel4x" path="res://scenes/world.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cgqyfbdnyru5d" path="res://scenes/character.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://c0jjv0m8mbo7j" path="res://assets/green_tile.png" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://bc30xet8hje5" path="res://assets/dark_green_tile.png" id="3_lnu2h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnu2h"]
 
 [node name="Game" type="Node2D"]
 
-[node name="Hintergrund" type="TextureRect" parent="."]
-offset_right = 1200.0
-offset_bottom = 800.0
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1198.0
+offset_bottom = 799.0
 texture = ExtResource("2_yqjtg")
-
-[node name="World" parent="." instance=ExtResource("3_lnu2h")]
+stretch_mode = 1
 
 [node name="Character" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(155, 79)
+position = Vector2(39, 42)
+
+[node name="Hindernis" type="Sprite2D" parent="."]
+modulate = Color(1, 0.360784, 1, 1)
+position = Vector2(168, 89)
+scale = Vector2(14.5295, 8.75056)
+texture = ExtResource("3_lnu2h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Hindernis"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hindernis/StaticBody2D"]
+scale = Vector2(0.583759, 0.352437)
+shape = SubResource("CapsuleShape2D_lnu2h")

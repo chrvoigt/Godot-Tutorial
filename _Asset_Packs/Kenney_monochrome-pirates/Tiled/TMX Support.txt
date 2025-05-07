@@ -1,0 +1,18 @@
+
+Eine .tmx-Datei beschreibt typischerweise:
+	•	Tile-Größe (z. B. 32×32)
+	•	Map-Größe (z. B. 100×100 Tiles)
+	•	Tilesets (z. B. Verweise auf PNGs oder .tsx-Dateien)
+	•	Tile-Layer (Hintergrund, Vordergrund, Kollision etc.)
+	•	Object-Layer (Spawnpunkte, Triggerzonen, Events)
+	•	Kollisionen / Properties (optional über Objektgruppen)
+	•	Custom Properties (z. B. type="water")
+
+
+
+.tmx-Dateien werden oft in Custom Engines, Frameworks und Spieleprojekten verwendet:
+	•	z. B. in libGDX, Phaser, MonoGame, LÖVE
+
+Godot unterstützt .tmx-Dateien nicht nativ. Es gibt jedoch:
+	•	Import-Plugins von Drittanbietern (z. B. Tiled2Godot)
+

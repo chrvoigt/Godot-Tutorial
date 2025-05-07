@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="__Sprite_Animation"
-run/main_scene="uid://o3bopvdfecih"
+config/name="01 Sprite Animation Final"
+run/main_scene="uid://bfg4ho30ag2hd"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

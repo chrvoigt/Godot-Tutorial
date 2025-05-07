@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1746558932
+icon.svg::CompressedTexture2D/CompressedTexture2D::6818247327265049466::1745909797::1746378798::1::::<><><>0<>0<>956f492ca8909707c6dfad6042161aaa<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://assets/::1746378798
+Background_1200x800.png::CompressedTexture2D/CompressedTexture2D::8825950087130099776::1745909797::1746378798::1::::<><><>0<>0<>512089064cc5da18de39d073d5a086fb<>res://.godot/imported/Background_1200x800.png-c0b76280393f2d3b2584d5347fa02d7b.ctex::
+character-sheet.png::CompressedTexture2D/CompressedTexture2D::3976121757585185924::1745909797::1746378798::1::::<><><>0<>0<>d754aaa281b8cba688db8021bee52f17<>res://.godot/imported/character-sheet.png-5b65c2c14f33d5b4af0133a34ab3db4c.ctex::
+character.png::CompressedTexture2D/CompressedTexture2D::5319622138661793642::1745909797::1746378798::1::::<><><>0<>0<>4b740aeb0f88c524afe1da60d2b089d1<>res://.godot/imported/character.png-7d161e056639ffa8fae932e906cc0673.ctex::
+dark_green_tile.png::CompressedTexture2D/CompressedTexture2D::76063534915164146::1746203361::1746378798::1::::<><><>0<>0<>b3e942dee560a0279888929195f34a83<>res://.godot/imported/dark_green_tile.png-429774e297bdc636d431c1ba59610edb.ctex::
+green_tile.png::CompressedTexture2D/CompressedTexture2D::6546727145867318889::1745954559::1746378798::1::::<><><>0<>0<>aba05227c68f1457004d713bc3fd7756<>res://.godot/imported/green_tile.png-9826b884345f36efde4edd5ae62685ca.ctex::
+single_character.png::CompressedTexture2D/CompressedTexture2D::8939849293198797307::1745909797::1746378798::1::::<><><>0<>0<>9448c2522b6a528e8ada360816c6656a<>res://.godot/imported/single_character.png-c0dc2998d36636dd8723154afa685959.ctex::
+walking-ghost.png::CompressedTexture2D/CompressedTexture2D::7586438446885229037::1728821174::1746378798::1::::<><><>0<>0<>1dd41414d9704c11ba8f7f36cb9c6c96<>res://.godot/imported/walking-ghost.png-ff386f4a6fda0d9eb37934030b4491f0.ctex::
+::res://scenes/::1746379457
+character.gd::GDScript/GDScript::3223679903660309085::1746377589::0::1::::<>CharacterBody2D<><>0<>0<><>::
+character.tscn::PackedScene::5228470667856460727::1746379457::0::1::::<><><>0<>0<><>::uid://bl6tsi2lr3q5r::::res://scenes/character.gd<>uid://bwwce57vmmgue::::res://assets/character-sheet.png
+game.tscn::PackedScene::2751525241472761901::1746379456::0::1::::<><><>0<>0<><>::uid://cgqyfbdnyru5d::::res://scenes/character.tscn<>uid://c0jjv0m8mbo7j::::res://assets/green_tile.png<>uid://bc30xet8hje5::::res://assets/dark_green_tile.png
+hindernis.gd::GDScript/GDScript::7245678531815965013::1746378209::0::1::::<>Sprite2D<><>0<>0<><>::
