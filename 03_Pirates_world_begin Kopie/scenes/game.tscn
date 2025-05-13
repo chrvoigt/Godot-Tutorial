@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw4gs5c8b1l5u"]
+
+[ext_resource type="PackedScene" uid="uid://d1efrntysqtxg" path="res://scenes/pirate_world.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dwasgbtva41vn" path="res://scenes/character.tscn" id="2_lnu2h"]
+
+[node name="Game" type="Node2D"]
+
+[node name="PirateWorld" parent="." instance=ExtResource("1_yqjtg")]
+
+[node name="Character" parent="." instance=ExtResource("2_lnu2h")]
+position = Vector2(1415, 651)

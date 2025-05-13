@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbovadsu521cy"]
+
+[ext_resource type="Texture2D" uid="uid://uoo8hxlvquv2" path="res://assets/Pflanzen.png" id="1_atc55"]
+[ext_resource type="Script" uid="uid://ceu22llgmatph" path="res://scenes/blume.gd" id="1_hk0qt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htujo"]
+size = Vector2(12, 12)
+
+[node name="Blume" type="Node2D"]
+script = ExtResource("1_hk0qt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_atc55")
+hframes = 9
+vframes = 5
+frame = 32
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_htujo")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

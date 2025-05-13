@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmhgiefyw3t63"]
+
+[ext_resource type="PackedScene" uid="uid://0h6ggidbxdp3" path="res://scenes/sprouty.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cmbleg6d6p0jm" path="res://scenes/world.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cvyg60qrou20u" path="res://scenes/quallen.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bbovadsu521cy" path="res://scenes/blume.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dw5uyi67lcjlo" path="res://scenes/trap.tscn" id="5_iywne"]
+
+[node name="Game" type="Node2D"]
+
+[node name="World" parent="." instance=ExtResource("2_lnu2h")]
+
+[node name="QuallenLayer" type="Node2D" parent="."]
+
+[node name="Quallen" parent="QuallenLayer" instance=ExtResource("3_lnu2h")]
+position = Vector2(9, 25)
+
+[node name="Quallen2" parent="QuallenLayer" instance=ExtResource("3_lnu2h")]
+position = Vector2(-46, 1)
+
+[node name="Quallen3" parent="QuallenLayer" instance=ExtResource("3_lnu2h")]
+position = Vector2(50, 12)
+
+[node name="BlumenLayer" type="Node2D" parent="."]
+
+[node name="Blume" parent="BlumenLayer" instance=ExtResource("4_lbhrr")]
+position = Vector2(146, 136)
+
+[node name="Blume2" parent="BlumenLayer" instance=ExtResource("4_lbhrr")]
+position = Vector2(201, 159)
+
+[node name="Blume3" parent="BlumenLayer" instance=ExtResource("4_lbhrr")]
+position = Vector2(372, 125)
+
+[node name="Sprouty" parent="." instance=ExtResource("1_yqjtg")]
+position = Vector2(119, 120)
+
+[node name="Trap" parent="." instance=ExtResource("5_iywne")]
+position = Vector2(269, 142)

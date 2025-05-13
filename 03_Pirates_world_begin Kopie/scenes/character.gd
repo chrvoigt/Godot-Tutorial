@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-#@onready var sprite_2d: Sprite2D = $Sprite2D
-#@export var img_scale: Vector2 = Vector2(1,1) 
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -10,7 +8,7 @@ extends CharacterBody2D
 
 func _ready() -> void:
 	pass 
-	
+
 func _physics_process(_delta: float) -> void:
 	var input_vector := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
