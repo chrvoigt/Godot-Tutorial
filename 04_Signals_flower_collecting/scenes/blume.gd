@@ -11,7 +11,8 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print ('Flower met ..  ', body.name)  
 	if body.name == 'Sprouty': 
-		queue_free()  
+		body.speed *= 0.5 
+		
 	
 
 #@export var value: int = 1  # Wert einer Energieflame, später anpassbar 

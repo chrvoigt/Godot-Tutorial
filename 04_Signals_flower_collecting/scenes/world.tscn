@@ -138,7 +138,7 @@ position = Vector2(259, 63)
 polygon = PackedVector2Array(-1, -1, 36, 1, 46, 5, 45, 23, 42, 32, 15, 34, 0, 34, -3, 40, -2, 52, 54, 30, 60, 21, 47, -9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WasserCollisions/StaticBody2D"]
-position = Vector2(324, 185)
+position = Vector2(326, 182)
 rotation = 3.14159
 scale = Vector2(2.59412, -0.574276)
 shape = SubResource("RectangleShape2D_k0juu")
