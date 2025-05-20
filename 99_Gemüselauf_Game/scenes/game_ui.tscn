@@ -1,0 +1,168 @@
+[gd_scene load_steps=8 format=3 uid="uid://bs454uduf8d0p"]
+
+[ext_resource type="Script" uid="uid://dh8u7ahac6hi4" path="res://scenes/game_ui.gd" id="1_aw6bd"]
+[ext_resource type="Texture2D" uid="uid://nvwrqvpfs5di" path="res://assets/ui/heart.png" id="4_2wcpy"]
+[ext_resource type="Texture2D" uid="uid://b3phbkapqnhil" path="res://assets/ui/green_energy.png" id="4_cbtmc"]
+[ext_resource type="Texture2D" uid="uid://dgog40s8yq3gr" path="res://assets/ui/runner.png" id="4_u8hot"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ox1tb"]
+bg_color = Color(0.968627, 0.988235, 1, 0.823529)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bphy"]
+bg_color = Color(0.407843, 0.0705882, 0.0823529, 0.823529)
+
+[sub_resource type="SystemFont" id="SystemFont_w1prj"]
+font_weight = 200
+generate_mipmaps = true
+subpixel_positioning = 0
+msdf_size = 100
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_aw6bd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Der Gemüselauf  - Maximiere Deine Gemüsepunkte!"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+texture_filter = 1
+offset_left = 1.0
+offset_top = 44.0
+offset_right = 464.0
+offset_bottom = 253.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ox1tb")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Lives" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Lives"]
+layout_mode = 2
+texture = ExtResource("4_2wcpy")
+expand_mode = 2
+
+[node name="Panel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Lives"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.341141, 0.369632, 0.390787, 1)
+theme_override_font_sizes/font_size = 35
+text = "Lives:"
+
+[node name="Lives_Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Lives"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.341141, 0.369632, 0.390787, 1)
+theme_override_font_sizes/font_size = 35
+text = "10"
+horizontal_alignment = 2
+
+[node name="Speed" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Speed"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_u8hot")
+expand_mode = 2
+
+[node name="Panel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Speed"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.341141, 0.369632, 0.390787, 1)
+theme_override_font_sizes/font_size = 35
+text = "Speed:"
+
+[node name="Speed_Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Speed"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.341141, 0.369632, 0.390787, 1)
+theme_override_font_sizes/font_size = 35
+text = "250"
+horizontal_alignment = 2
+
+[node name="Skills" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Skills"]
+layout_mode = 2
+texture = ExtResource("4_cbtmc")
+expand_mode = 2
+
+[node name="Panel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Skills"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.341141, 0.369632, 0.390787, 1)
+theme_override_font_sizes/font_size = 35
+text = "Veggie-Points:"
+
+[node name="Skills_Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Skills"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.341141, 0.369632, 0.390787, 1)
+theme_override_font_sizes/font_size = 35
+text = "0"
+horizontal_alignment = 2
+
+[node name="Game_Over" type="Panel" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7bphy")
+
+[node name="Label" type="Label" parent="Game_Over"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.1667
+offset_bottom = 11.1667
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_w1prj")
+theme_override_font_sizes/font_size = 200
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

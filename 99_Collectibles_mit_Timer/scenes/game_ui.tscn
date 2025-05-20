@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://biukvwym6786q"]
+
+[ext_resource type="Script" uid="uid://cy8h07jam4jn5" path="res://scenes/game_ui.gd" id="1_ticag"]
+[ext_resource type="Texture2D" uid="uid://cgfiwsxmmkt8d" path="res://assets/BigEnergyBall.png" id="2_xo560"]
+[ext_resource type="PackedScene" uid="uid://c8b5vsfmjuxpo" path="res://scenes/timer.tscn" id="3_dpsag"]
+
+[node name="Game_UI" type="CanvasLayer"]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+script = ExtResource("1_ticag")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.72855, 1.56546)
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+offset_right = 24.0
+offset_bottom = 24.0
+texture = ExtResource("2_xo560")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Control"]
+texture_filter = 1
+offset_left = 30.0
+offset_top = 2.0
+offset_right = 48.0
+offset_bottom = 25.0
+scale = Vector2(1.0425, 0.930355)
+theme_override_colors/font_color = Color(0.337255, 0, 0, 1)
+text = "0"
+horizontal_alignment = 1
+
+[node name="Pause" type="Label" parent="Control"]
+offset_left = 82.0
+offset_top = 45.0
+offset_right = 807.0
+offset_bottom = 182.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0.701961, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Take a break ..."
+
+[node name="Timer" parent="Control" instance=ExtResource("3_dpsag")]
+position = Vector2(2.5, 23.5)
+scale = Vector2(1.57152, 1.48393)

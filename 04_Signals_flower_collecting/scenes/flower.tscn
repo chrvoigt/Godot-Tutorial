@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://dup3goq2u4p3f"]
+
+[ext_resource type="Texture2D" uid="uid://uoo8hxlvquv2" path="res://assets/Pflanzen.png" id="1_8x8dx"]
+
+[sub_resource type="GDScript" id="GDScript_8x8dx"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print ('entering body was: ', body) 
+	if body.name == 'Sprouty': 
+		body.scale = Vector2(1.5,1.5)
+		
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agc10"]
+size = Vector2(16, 16)
+
+[node name="Flower" type="Node2D"]
+script = SubResource("GDScript_8x8dx")
+
+[node name="Kopf" type="Sprite2D" parent="."]
+texture = ExtResource("1_8x8dx")
+centered = false
+hframes = 9
+vframes = 5
+frame = 26
+
+[node name="Stil" type="Sprite2D" parent="."]
+texture = ExtResource("1_8x8dx")
+centered = false
+offset = Vector2(0, 16)
+hframes = 9
+vframes = 5
+frame = 35
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_agc10")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

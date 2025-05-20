@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://bmhgiefyw3t63"]
+
+[ext_resource type="PackedScene" uid="uid://0h6ggidbxdp3" path="res://scenes/sprouty.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cmbleg6d6p0jm" path="res://scenes/world.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://dup3goq2u4p3f" path="res://scenes/flower.tscn" id="3_iywne"]
+[ext_resource type="PackedScene" uid="uid://cvyg60qrou20u" path="res://scenes/quallen.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://dw5uyi67lcjlo" path="res://scenes/poison.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://b14k8dynpcl1t" path="res://scenes/UI.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://cky4qae0g20h8" path="res://scenes/skull.tscn" id="7_u5sy4"]
+
+[node name="Game" type="Node2D"]
+
+[node name="World" parent="." instance=ExtResource("2_lnu2h")]
+
+[node name="QuallenLayer" type="Node2D" parent="."]
+
+[node name="Quallen" parent="QuallenLayer" instance=ExtResource("3_lnu2h")]
+position = Vector2(243, 81)
+
+[node name="Quallen2" parent="QuallenLayer" instance=ExtResource("3_lnu2h")]
+position = Vector2(97, -16)
+
+[node name="Quallen3" parent="QuallenLayer" instance=ExtResource("3_lnu2h")]
+position = Vector2(224, 3)
+
+[node name="PlantLayer" type="Node2D" parent="."]
+
+[node name="Flower" parent="PlantLayer" instance=ExtResource("3_iywne")]
+position = Vector2(191, 134)
+
+[node name="Poison" parent="PlantLayer" instance=ExtResource("5_iywne")]
+position = Vector2(269, 142)
+
+[node name="Skull" parent="." instance=ExtResource("7_u5sy4")]
+modulate = Color(0.224783, 0.718013, 0.477444, 1)
+anchors_preset = 9
+anchor_right = 0.0
+offset_left = 105.0
+offset_top = 288.0
+offset_right = 105.0
+offset_bottom = 288.0
+grow_horizontal = 1
+
+[node name="Sprouty" parent="." instance=ExtResource("1_yqjtg")]
+position = Vector2(136, 187)
+
+[node name="Ui" parent="." instance=ExtResource("6_p57ef")]
