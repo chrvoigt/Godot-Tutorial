@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfctesrogrpes"]
+
+[ext_resource type="Texture2D" uid="uid://cx8n21ojibpdf" path="res://assets/auge.png" id="1_hauuy"]
+[ext_resource type="Script" uid="uid://d31wtwjt2711a" path="res://scenes/auge.gd" id="1_xs5nl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hauuy"]
+radius = 15.0751
+
+[node name="Auge" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xs5nl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_hauuy")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+scale = Vector2(13.2669, 1.22516)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+scale = Vector2(1, 10.9888)
+shape = SubResource("CircleShape2D_hauuy")
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]

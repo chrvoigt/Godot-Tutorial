@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmhgiefyw3t63"]
+[gd_scene load_steps=9 format=3 uid="uid://bmhgiefyw3t63"]
 
 [ext_resource type="PackedScene" uid="uid://0h6ggidbxdp3" path="res://scenes/sprouty.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cmbleg6d6p0jm" path="res://scenes/world.tscn" id="2_lnu2h"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dw5uyi67lcjlo" path="res://scenes/poison.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://b14k8dynpcl1t" path="res://scenes/UI.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://cky4qae0g20h8" path="res://scenes/skull.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://cfctesrogrpes" path="res://scenes/auge.tscn" id="8_gee14"]
 
 [node name="Game" type="Node2D"]
 
@@ -40,6 +41,12 @@ offset_top = 288.0
 offset_right = 105.0
 offset_bottom = 288.0
 grow_horizontal = 1
+
+[node name="Auge" parent="." instance=ExtResource("8_gee14")]
+offset_left = 83.0
+offset_top = 334.0
+offset_right = 85.0
+offset_bottom = 334.0
 
 [node name="Sprouty" parent="." instance=ExtResource("1_yqjtg")]
 position = Vector2(136, 187)

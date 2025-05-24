@@ -83,3 +83,16 @@ custom_minimum_size = Vector2(10, 25)
 layout_mode = 2
 size_flags_horizontal = 0
 color = Color(0.255766, 0.547278, 0.280057, 1)
+
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer2"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer2"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+color = Color(0.948456, 0.71588, 0.415365, 1)

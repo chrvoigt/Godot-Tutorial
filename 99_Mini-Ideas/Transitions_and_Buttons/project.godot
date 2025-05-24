@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Transitions"
-run/main_scene="res://scene_a.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+run/main_scene="res://scenes/scene_a.tscn"
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]

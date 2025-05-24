@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2mh6ilc03lkj"]
+
+[ext_resource type="Script" uid="uid://hl7lkwg84hkl" path="res://scenes/level_2.gd" id="1_eqxsl"]
+[ext_resource type="Texture2D" uid="uid://bfr60j6oxy5je" path="res://backdrops/armor_hall.jpg" id="1_pbc48"]
+[ext_resource type="PackedScene" uid="uid://c775fr3x6qjj7" path="res://scenes/ghost.tscn" id="3_b4j7a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atgmx"]
+size = Vector2(168, 109)
+
+[node name="Level_2" type="Node2D"]
+script = ExtResource("1_eqxsl")
+
+[node name="Backdrop_L2" type="TextureRect" parent="."]
+offset_right = 2000.0
+offset_bottom = 1167.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_pbc48")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ExitArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
+position = Vector2(955, 764.5)
+shape = SubResource("RectangleShape2D_atgmx")
+
+[node name="Ghost" parent="." instance=ExtResource("3_b4j7a")]
+position = Vector2(765, 1054)
+
+[connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3hycqgvfftfp"]
+
+[ext_resource type="Texture2D" uid="uid://c4ss1uun2ubbc" path="res://backdrops/graveyard.jpg" id="1_uwxec"]
+[ext_resource type="PackedScene" uid="uid://c775fr3x6qjj7" path="res://scenes/ghost.tscn" id="2_1pn4d"]
+[ext_resource type="PackedScene" uid="uid://ckeiijwqgnqta" path="res://scenes/ui.tscn" id="3_ah8om"]
+
+[node name="Level_3" type="Node2D"]
+
+[node name="Backdrop_L3" type="TextureRect" parent="."]
+offset_right = 2000.0
+offset_bottom = 1159.0
+texture = ExtResource("1_uwxec")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Ghost" parent="." instance=ExtResource("2_1pn4d")]
+position = Vector2(816, 1032)
+
+[node name="UI" parent="." instance=ExtResource("3_ah8om")]

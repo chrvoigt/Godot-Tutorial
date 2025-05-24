@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckeiijwqgnqta"]
+
+[ext_resource type="FontFile" uid="uid://0ocj535k8q1i" path="res://UI_styles/AlmendraSC-Regular.ttf" id="1_dxegm"]
+[ext_resource type="Script" uid="uid://bmd318u6361h5" path="res://scenes/ui.gd" id="1_rgb1x"]
+[ext_resource type="StyleBox" uid="uid://wc06wt36gv6s" path="res://UI_styles/button.tres" id="1_s1rws"]
+
+[sub_resource type="Theme" id="Theme_eap5q"]
+
+[node name="Control" type="CanvasLayer"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -318.5
+offset_right = 513.0
+offset_bottom = 477.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+script = ExtResource("1_rgb1x")
+
+[node name="Button1" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_eap5q")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("1_dxegm")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = ExtResource("1_s1rws")
+text = "Zum Start"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("1_dxegm")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = ExtResource("1_s1rws")
+text = "Github"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("1_dxegm")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = ExtResource("1_s1rws")
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Button1" to="VBoxContainer" method="_on_button_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="VBoxContainer" method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="VBoxContainer" method="_on_button_3_pressed"]
