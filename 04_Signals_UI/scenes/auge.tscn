@@ -6,13 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_hauuy"]
 radius = 15.0751
 
-[node name="Auge" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Auge" type="Node2D"]
 script = ExtResource("1_xs5nl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpa1u6vlfcojl"]
+
+[ext_resource type="Texture2D" uid="uid://0os602jkbxc4" path="res://assets/world/Checkerboard_pattern.svg" id="1_nnsk1"]
+
+[node name="World" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 2216.0
+offset_bottom = 1302.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_nnsk1")
+stretch_mode = 1

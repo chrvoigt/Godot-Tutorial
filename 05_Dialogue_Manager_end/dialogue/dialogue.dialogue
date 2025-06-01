@@ -1,0 +1,27 @@
+~ zigzag
+set State.counter += 1 
+match State.counter
+	when 1
+		Zigzag: Wir hatten noch nicht das Vergnügen. Willkommen!
+		Ghostie: Vergnügen? 
+	when 2
+		Zigzag: Nicht Du schon wieder ^^_ ... State.counter {{State.counter}}
+	else
+		Zigzag: Das {{State.counter}}. Mal. Deine Zeit ist abgelaufen! 
+=> END
+
+~ bigbag
+Bigbag: [[Hi|Hello|Howdy]],  you picked the wrong fish.
+Ghostie: Oh no, was sind den meine Optionen?
+Bigbag: Du könntest ..
+- Good Ghostie 
+	Bigbag: OK Du möchtest Freundschaft schließen? 
+	set State.counter += 1
+- Bad Ghostie 
+	Bigbag: OK, wir werden keine Freunde!
+	set State.counter -= 1
+- Noch ein Versuch => bigbag
+	set State.counter -=2
+- Kein Bock => END
+Dein Spielgewissen: Entscheidungen haben Konsequenzen. Dein aktueller Kontostand beträgt {{State.counter}} Gummihaie. 
+=> END

@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://o406841tfovh"]
+
+[ext_resource type="PackedScene" uid="uid://d28c6bc7eixdi" path="res://scenes/crazy_big_fish.tscn" id="1_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bellsnxwcccsa" path="res://scenes/crazy_fish.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dkn5gohmj4jeu" path="res://scenes/Ghostie.tscn" id="4_iywne"]
+[ext_resource type="PackedScene" uid="uid://ddw60hn2hgurn" path="res://helpers/camera.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://bpa1u6vlfcojl" path="res://scenes/world.tscn" id="5_iywne"]
+
+[node name="Game" type="Node2D"]
+
+[node name="World" parent="." instance=ExtResource("5_iywne")]
+
+[node name="Crazy_Big_Fish" parent="." instance=ExtResource("1_lnu2h")]
+position = Vector2(64, 149)
+
+[node name="Crazy_Fish" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(236, 145)
+
+[node name="Ghostie" parent="." instance=ExtResource("4_iywne")]
+position = Vector2(150, 149)
+
+[node name="Camera" parent="Ghostie" instance=ExtResource("4_lbhrr")]
+anchor_mode = 1
+zoom = Vector2(6, 6)

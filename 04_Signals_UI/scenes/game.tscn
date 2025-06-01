@@ -43,10 +43,7 @@ offset_bottom = 288.0
 grow_horizontal = 1
 
 [node name="Auge" parent="." instance=ExtResource("8_gee14")]
-offset_left = 83.0
-offset_top = 334.0
-offset_right = 85.0
-offset_bottom = 334.0
+position = Vector2(84, 341)
 
 [node name="Sprouty" parent="." instance=ExtResource("1_yqjtg")]
 position = Vector2(136, 187)
