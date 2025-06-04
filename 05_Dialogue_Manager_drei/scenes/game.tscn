@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmhgiefyw3t63"]
+
+[ext_resource type="PackedScene" uid="uid://0h6ggidbxdp3" path="res://scenes/sprouty.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cmbleg6d6p0jm" path="res://scenes/world.tscn" id="2_lnu2h"]
+
+[node name="Game" type="Node2D"]
+
+[node name="World" parent="." instance=ExtResource("2_lnu2h")]
+position = Vector2(12, 9)
+
+[node name="Sprouty" parent="." instance=ExtResource("1_yqjtg")]
+position = Vector2(129, 90)

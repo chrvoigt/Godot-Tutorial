@@ -1,8 +1,0 @@
-res://scenes/game.tscn
-res://scenes/small_fish.tscn
-res://scenes/big_fish.tscn
-res://scenes/Ghostie.tscn
-res://scenes/world.tscn
-res://helpers/actionable.tscn
-res://helpers/actionable.gd
-res://scenes/ghostie.gd
