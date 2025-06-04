@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://o406841tfovh"]
+
+[ext_resource type="PackedScene" uid="uid://cbfc7obbvfxve" path="res://scenes/Ghostie.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://dgdf2tr3o2n0q" path="res://scenes/world.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cfx8xwqwt77uh" path="res://scenes/big_fish.tscn" id="3_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dvgigvg50r2xd" path="res://scenes/small_fish.tscn" id="4_iywne"]
+
+[node name="Game" type="Node2D"]
+
+[node name="World" parent="." instance=ExtResource("1_yqjtg")]
+
+[node name="BigFish" parent="." instance=ExtResource("3_lbhrr")]
+position = Vector2(268, 178)
+
+[node name="SmallFish" parent="." instance=ExtResource("4_iywne")]
+position = Vector2(429, 180)
+scale = Vector2(0.5, 0.5)
+
+[node name="Ghostie" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(347, 178)
+
+[node name="Camera2D" type="Camera2D" parent="Ghostie"]
+zoom = Vector2(6, 6)

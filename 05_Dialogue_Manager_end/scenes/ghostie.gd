@@ -15,8 +15,9 @@ func _process(delta):
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed('ui_accept'):
 		var actionables = actionable_finder.get_overlapping_areas()
+		print (actionables)
 		if actionables.size() > 0:
-			print (actionables[0].dialogue_start)
+			print ('Feld Zero: ', actionables[0].dialogue_start)
 			actionables [0].action()
 
 func handle_movement(delta):
