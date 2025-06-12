@@ -1,0 +1,94 @@
+~ bier
+Philosophin: "Sag mal, wozu schuften? Die Welt ist Chaos, das einzig Sichere ist der erste Schluck Bier."
+Unentschlossener: "Mein Studium eröffnet Perspektiven, nicht nur Kater."
+- "Erkläre mir, warum Bier sinnvoller ist."     
+	set PlayerStats.energy -= 2 
+	=> argument
+- "Ich bleibe bei meinen Büchern."               
+	set PlayerStats.energy += 2
+	=> deeper 
+
+~ argument
+Designer: your energy score is {{PlayerStats.energy}}
+Philosophin: "Wissen ist vergänglich, Durst ist real. Ein Bier löst die Gleichung ›Leid ÷ Zeit‹ in Sekunden."
+Unentschlossener: "Eine effiziente Formel, aber was ist mit Jobchancen?"
+- "Karriere ohne Lebenskraft?"                   
+	set PlayerStats.energy += 2
+	=> deeper
+- "Vielleicht ein Bier, dann zurück an die Arbeit." 
+	set PlayerStats.energy -= 2
+	=> compromise
+
+~ deeper
+Designer: your energy score is {{PlayerStats.energy}}
+Philosophin: "Karriere ist nur verschobene Freizeit. Bier ist inkrementelle Gegenwart."
+Unentschlossener: "Klingt … beunruhigend überzeugend."
+=> beer
+
+~ compromise
+Designer: your energy score is {{PlayerStats.energy}}
+Philosophin: "Illusion! Nach dem einen Bier ruft der zweite, dann der Feierabend."
+Unentschlossener: "Verdammt, Logik mit Hopfen …"
+- "Okay, ich kapituliere."                       
+	set PlayerStats.energy -= 2
+	=> beer
+- "Ich muss standhaft bleiben!"                  
+	set PlayerStats.energy += 2
+	=> defending
+
+~ defending
+Designer: your energy score is {{PlayerStats.energy}}
+Philosophin: "Du tauschst Leben gegen Noten. Aristoteles würde sich im Grab umdrehen und ein Fass anzapfen."
+Unentschlossener: "Jetzt fühle ich mich ziemlich klein."
+=> shame
+
+~ beer
+Designer: your energy score is {{PlayerStats.energy}}
+Unentschlossener: "Prost. Meine Lernziele schwimmen bereits."
+Philosophin: "Sie schwimmen – du auch, in Glückseligkeit."
+=> END
+
+~ shame
+Unentschlossener: "Vielleicht bin ich doch nur ein Zahlenknecht."
+Philosophin: "Komm, rettungslos verloren? Ein Bier schafft Klarheit."
+=> END 
+
+~ buch
+Freundin: "Leg die Hausarbeit beiseite. Lies lieber ›Shop Class as Soulcraft‹ – bringt dir mehr als noch ein Absatz Methodik."
+Studentin: "Du weißt, dass diese Arbeit über meinen Abschluss entscheidet."
+- "Was genau bringt mir das Buch?"           => argue
+- "Danke, aber ich muss weiter­schreiben."   => defend
+
+~ argue
+Freundin: "Crawford zeigt, dass echte Kompetenz aus Praxis kommt, nicht aus Seminarfolien."
+Studentin: "Praxis ohne Theorie wirkt schnell zufällig."
+- "Vielleicht sollte ich trotzdem reinschauen."   => doubt
+- "Du stellst das Studium zu pauschal infrage."   => counter
+
+~ doubt
+Studentin: "Ich les rein – aber dein Spott sitzt tiefer als das Argument."
+Freundin: "Nimm’s sportlich. Ein guter Text hält Kritik aus, du auch."
+=> END
+
+~ counter
+Freundin: "Pauschal? Nein. Ich hinterfrage, ob dein Abschluss der beste Weg zu Können ist."
+Studentin: "Vielleicht, aber die Karriereoptionen sind real."
+- "Wir diskutieren nach Abgabe weiter."          => postpone
+- "Ich bleibe jetzt bei meiner Arbeit."          => resolve
+
+~ defend
+Freundin: "Noch ein Credit Point macht dich nicht klüger, nur müder."
+Studentin: "Mag sein, aber ohne Abschluss bleib ich bei der Stellensuche außen vor."
+- "Okay, Buch später."                           => postpone
+- "Ich schreibe weiter, Punkt."                  => resolve
+
+~ postpone
+Freundin: "Später klingt nach »vergessen«. Aber gut, dein Risiko."
+Studentin: "Trotzdem danke für den Buchtipp … und die Nadelstiche."
+=> END
+
+~ resolve
+Studentin: "Ich arbeite weiter, auch wenn deine Zweifel hängen bleiben."
+Freundin: "Dann hol ich mir ein Bier. Vielleicht merkst du später, was dir fehlt."
+Studentin: "Vielleicht merke ich’s schon – nur anders, als du denkst."
+=> END

@@ -79,7 +79,7 @@ custom_minimum_size = Vector2(200, 25)
 layout_mode = 2
 
 [node name="Green" type="ColorRect" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer"]
-custom_minimum_size = Vector2(10, 25)
+custom_minimum_size = Vector2(50, 10)
 layout_mode = 2
 size_flags_horizontal = 0
 color = Color(0.255766, 0.547278, 0.280057, 1)
