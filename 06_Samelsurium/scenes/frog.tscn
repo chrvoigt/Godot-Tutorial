@@ -71,6 +71,7 @@ zoom = Vector2(5, 5)
 stream = ExtResource("3_rq8tc")
 pitch_scale = 0.82
 autoplay = true
+max_distance = 300.0
 attenuation = 0.25
 parameters/looping = true
 

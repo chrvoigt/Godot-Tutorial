@@ -47,6 +47,7 @@ func _physics_process(_delta: float) -> void:
 		# Abbremsen bei keiner Eingabe (Bremsfaktor 0.05 kann geänedrt werden) 
 		velocity.x = move_toward(velocity.x, 0, PlayerStats.speed*0.15)
 		velocity.y = move_toward(velocity.y, 0, PlayerStats.speed*0.15)
+		
 	if velocity == Vector2.ZERO: 
 		animation_player.play("idle")
 		is_walking = false
