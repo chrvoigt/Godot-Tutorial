@@ -10,19 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Signals Flower"
-run/main_scene="uid://bmhgiefyw3t63"
+config/name="Fading"
+run/main_scene="uid://d048j6uep8ytw"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[display]
-
-window/size/viewport_width=2000
-window/size/viewport_height=1000
-window/stretch/scale_mode="integer"
-
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

@@ -10,10 +10,15 @@ config_version=5
 
 [application]
 
-config/name="Signals Flower"
+config/name="Sammelsurium"
 run/main_scene="uid://bmhgiefyw3t63"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+PlayerStats="*res://singleton/player_stats.gd"
+Signals="*res://singleton/signals.gd"
 
 [display]
 

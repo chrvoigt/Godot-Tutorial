@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://bq5sir8y8n74n"]
+
+[ext_resource type="Texture2D" uid="uid://c6sayt8wm0mlk" path="res://assets/2d_animation_frog_spritesheet.webp" id="1_mqod6"]
+[ext_resource type="Script" uid="uid://mlmx37vecq8y" path="res://scenes/path_follow_2d.gd" id="1_qyo2l"]
+[ext_resource type="AudioStream" uid="uid://cqsnbi55ggiod" path="res://assets/sound/frog_sound.mp3" id="3_rq8tc"]
+[ext_resource type="AudioStream" uid="uid://bnbqlboydhx32" path="res://assets/sound/nature_sound.mp3" id="4_1g2vb"]
+
+[sub_resource type="Curve2D" id="Curve2D_uu7fg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -49, 98, 0, 0, 0, 0, 50, 120, 0, 0, 0, 0, 113, 105, 0, 0, 0, 0, 40, 65, 0, 0, 0, 0, -49, 98)
+}
+point_count = 5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqod6"]
+atlas = ExtResource("1_mqod6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyo2l"]
+atlas = ExtResource("1_mqod6")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rq8tc"]
+atlas = ExtResource("1_mqod6")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1g2vb"]
+atlas = ExtResource("1_mqod6")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ybftx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqod6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyo2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rq8tc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g2vb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Frog" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(50, -57)
+curve = SubResource("Curve2D_uu7fg")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-49, 98)
+rotation = 0.234723
+rotates = false
+script = ExtResource("1_qyo2l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-2.32573, -9.72578)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_ybftx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="FrogSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_rq8tc")
+pitch_scale = 0.82
+autoplay = true
+attenuation = 0.25
+parameters/looping = true
+
+[node name="NatureSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_1g2vb")
+volume_db = -0.51
+pitch_scale = 1.06
+autoplay = true
