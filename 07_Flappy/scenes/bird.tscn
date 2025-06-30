@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://i5whjxty8tu7"]
+
+[ext_resource type="Script" uid="uid://bd6yl1ixekd0v" path="res://scripts/bird.gd" id="1_kqhkv"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_l7ej2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kqhkv"]
+radius = 25.02
+
+[node name="Bird" type="CharacterBody2D"]
+modulate = Color(0.921569, 0.776471, 0, 1)
+position = Vector2(39, 35)
+script = ExtResource("1_kqhkv")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(50, 50)
+mesh = SubResource("SphereMesh_l7ej2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(0.972549, 0.882353, 0, 1)
+shape = SubResource("CircleShape2D_kqhkv")

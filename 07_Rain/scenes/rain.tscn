@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://85gyp6jnmivw"]
+
+[ext_resource type="Texture2D" uid="uid://pkgbe1mn7fat" path="res://assets/drop.png" id="1_5mvay"]
+[ext_resource type="Texture2D" uid="uid://87v3ffpg5wyc" path="res://assets/cloud.png" id="1_tchf5"]
+[ext_resource type="AudioStream" uid="uid://bxtk2qvt50spt" path="res://assets/rain.mp3" id="3_rru6j"]
+
+[sub_resource type="Curve" id="Curve_rru6j"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Rain" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(990, 376)
+amount = 1000
+texture = ExtResource("1_5mvay")
+speed_scale = 0.1
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 200)
+gravity = Vector2(500, 980)
+angle_min = -21.1
+angle_max = 14.2
+scale_amount_min = 0.0
+scale_amount_max = 0.01
+hue_variation_min = -0.8
+hue_variation_max = -0.1
+hue_variation_curve = SubResource("Curve_rru6j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(479, 149)
+scale = Vector2(0.469792, 0.453704)
+texture = ExtResource("1_tchf5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(1508.57, -122.62)
+texture = ExtResource("1_tchf5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Sprite2D2"]
+position = Vector2(1328, 159.5)
+scale = Vector2(0.595833, 0.537963)
+texture = ExtResource("1_tchf5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rru6j")
+volume_db = -13.481
+pitch_scale = 1.35
+autoplay = true

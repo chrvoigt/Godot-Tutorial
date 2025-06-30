@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp2tiv5tdxy2o"]
+
+[ext_resource type="Script" uid="uid://dguvewbljbg2l" path="res://scripts/tubes.gd" id="1_y1vio"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_g5ot3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1vio"]
+size = Vector2(53, 502)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jq1pj"]
+size = Vector2(54.5, 157.5)
+
+[node name="Tubes" type="Node2D"]
+script = ExtResource("1_y1vio")
+metadata/_edit_horizontal_guides_ = [2.0]
+metadata/_edit_vertical_guides_ = [-3.0]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0.862745, 0, 0.866667, 1)
+scale = Vector2(50, 498)
+mesh = SubResource("QuadMesh_g5ot3")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+modulate = Color(0.862745, 0, 0.866667, 1)
+position = Vector2(0, 664)
+scale = Vector2(50, 498)
+mesh = SubResource("QuadMesh_g5ot3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -5)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_y1vio")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 662)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_y1vio")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(0.75, 329.25)
+shape = SubResource("RectangleShape2D_jq1pj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
