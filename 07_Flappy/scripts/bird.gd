@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var gravity:float = 981
-@export var jumpforce: float = 300
+@export var jumpforce: float = 400
 
 func _physics_process(delta: float) -> void:
 	velocity.y +=gravity * delta

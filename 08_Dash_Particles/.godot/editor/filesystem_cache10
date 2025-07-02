@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1745909557
+::res://::1751455274
 icon.svg::CompressedTexture2D/CompressedTexture2D::6736852410117527816::1728710798::1742136166::1::::<><><>0<>0<>e719e28fec61308a40c4229a7ca85f1a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1741775660
 ::res://assets/audio/::1741773348
@@ -17,10 +17,10 @@ hat_man.png::CompressedTexture2D/CompressedTexture2D::6145883814222319610::17287
 ::res://dialogue/::1741883412
 ::res://helpers/::1742136567
 camera.tscn::PackedScene/PackedScene::7417172153188376927::1742136567::0::1::::<><><>0<>0<><>::
-::res://scenes/::1745909372
-game.tscn::PackedScene::1044085829507207905::1745909372::0::1::::<><><>0<>0<><>::uid://cbfc7obbvfxve::::res://scenes/Ghostie.tscn<>uid://cpqdgkmitohpa::::res://scenes/small_map.png
+::res://scenes/::1751454814
+game.tscn::PackedScene/PackedScene::1044085829507207905::1751454814::0::1::::<><><>0<>0<><>::uid://cbfc7obbvfxve::::res://scenes/Ghostie.tscn<>uid://cpqdgkmitohpa::::res://scenes/small_map.png
 ghostie.gd::GDScript/GDScript::6372761282718692086::1742376581::0::1::::<>CharacterBody2D<><>0<>0<><>::
-Ghostie.tscn::PackedScene::4853531416130451714::1745909372::0::1::::<><><>0<>0<><>::uid://cw2apha5a2nfa::::res://scenes/ghostie.gd<>uid://bw1n6gc3ckn8g::::res://assets/characters/walking-ghost.png<>uid://cnoxs5pq8ec7f::::res://scenes/hexagone.png
+Ghostie.tscn::PackedScene/PackedScene::4853531416130451714::1751454814::0::1::::<><><>0<>0<><>::uid://cw2apha5a2nfa::::res://scenes/ghostie.gd<>uid://bw1n6gc3ckn8g::::res://assets/characters/walking-ghost.png<>uid://cnoxs5pq8ec7f::::res://scenes/hexagone.png
 hexagone.png::CompressedTexture2D/CompressedTexture2D::5715627858005173821::1742326660::1742326660::1::::<><><>0<>0<>b9fa668d6cfe92970f8e4f6c053a184b<>res://.godot/imported/hexagone.png-bff90ced23606fcfdc8788113bb08fe5.ctex::
 small_map.png::CompressedTexture2D/CompressedTexture2D::5858897475923960122::1742325711::1742325711::1::::<><><>0<>0<>9183f5204be9869f1675582d6ff94438<>res://.godot/imported/small_map.png-d1e696b25865e373a8e165d0c1030882.ctex::
 ::res://singletons/::1742137223

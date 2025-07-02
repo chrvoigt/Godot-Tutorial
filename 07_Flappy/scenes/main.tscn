@@ -1,7 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://chrfhx6g7dqq1"]
+[gd_scene load_steps=7 format=3 uid="uid://chrfhx6g7dqq1"]
 
 [ext_resource type="Script" uid="uid://dsfdx4fqmxx6n" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://i5whjxty8tu7" path="res://scenes/bird.tscn" id="1_o5qli"]
+
+[sub_resource type="SystemFont" id="SystemFont_sugp2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jyhfs"]
+font = SubResource("SystemFont_sugp2")
+font_size = 50
 
 [sub_resource type="SystemFont" id="SystemFont_0wfyh"]
 
@@ -30,12 +36,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 6.0
-offset_right = 52.0
-offset_bottom = 75.0
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 2
+offset_right = 203.0
+offset_bottom = 141.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+text = "score:  
+"
+label_settings = SubResource("LabelSettings_jyhfs")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
 size_flags_vertical = 1
 text = "0"
 label_settings = SubResource("LabelSettings_sugp2")
