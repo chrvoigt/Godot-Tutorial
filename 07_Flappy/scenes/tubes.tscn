@@ -26,23 +26,21 @@ position = Vector2(0, 664)
 scale = Vector2(50, 498)
 mesh = SubResource("QuadMesh_g5ot3")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Failing" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Failing"]
 position = Vector2(-2, -5)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_y1vio")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Failing"]
 position = Vector2(0, 662)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_y1vio")
 
-[node name="Area2D2" type="Area2D" parent="."]
+[node name="Scoring" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scoring"]
 position = Vector2(0.75, 329.25)
 shape = SubResource("RectangleShape2D_jq1pj")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Failing" to="." method="_on_failing_body_entered"]
+[connection signal="body_entered" from="Scoring" to="." method="_on_scoring_body_entered"]
